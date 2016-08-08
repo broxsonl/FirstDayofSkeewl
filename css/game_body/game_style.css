@@ -3,6 +3,7 @@ GAME STRUCTURE STYLES
 ========================= */
 
 .content_container {
+  background-color: #ccc;
   display: flex;
   flex-direction: col;
   justify-content: space-around;
@@ -17,9 +18,12 @@ GAME STRUCTURE STYLES
   background-size: cover;
   height: 450px;
   width: 60%;
+
+  /*border: #5dfc0a solid 5px;*/
 }
 
 .instructions_content,
 .points_content {
   width: 20%;
+  vertical-align: top;
 }
