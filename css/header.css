@@ -1,24 +1,4 @@
 /* =========================
-UNIVERSAL STYLES
-========================= */
-* {
-  box-sizing: border-box;
-}
-
-body {
-  width: 960px;
-  margin: 0 auto;
-}
-
-ul li {
-  display: inline;
-}
-
-a {
-  text-decoration: none;
-}
-
-/* =========================
 HEADER STYLES
 ========================= */
 
