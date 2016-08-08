@@ -1,0 +1,25 @@
+/* =========================
+ABOUT STRUCTURE STYLES
+========================= */
+
+.img_header,
+.student_flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.about_section {
+  text-align: center;
+  margin: 100px 50px;
+}
+
+.student_flex p {
+  margin-left: 50px;
+}
+
+.student_flex p span {
+  font-weight: 700;
+  font-size: 20px;
+}
