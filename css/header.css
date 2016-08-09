@@ -3,7 +3,7 @@ HEADER STYLES
 ========================= */
 
 header {
-  background-color: #152614;
+  background-color: #000;
   height: 100px;
 }
 
@@ -15,6 +15,16 @@ header img {
 header nav {
   float: right;
   margin: 25px 50px;
+}
+
+header nav a,
+a:visited {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+header nav a:hover {
+  color: #5dfc0a;
 }
 
 nav ul li {
