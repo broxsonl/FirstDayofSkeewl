@@ -1,11 +1,12 @@
-/* =========================
+/* ========================================
 UNIVERSAL STYLES
-========================= */
+======================================== */
 * {
   box-sizing: border-box;
 }
 
 body {
+  background-image: url('../img/bg_pattern.jpg');
   max-width: 960px;
   margin: 0 auto;
 }
@@ -14,6 +15,61 @@ a {
   text-decoration: none;
 }
 
-p {
-  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+/* sticky footer using flexbox */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main_content {
+  flex-grow: 1;
+  background-color: #152614;
+}
+
+
+
+/* ========================================
+HEADER, FOOTER, & NAVIGATION STYLES
+======================================== */
+
+header,
+footer {
+  background-color: #000;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+header img,
+footer img {
+  margin: 0 15px;
+  border-radius: 100%;
+}
+
+header nav,
+footer nav {
+  margin: 0 50px;
+}
+
+header nav a,
+footer nav a,
+a:visited {
+  color: #eaf0ce;
+}
+
+header nav a:hover,
+footer nav a:hover {
+  color: #5dfc0a;
+}
+
+nav ul li {
+  font-family: 'Press Start 2P', sans-serif;
+  font-size: 14px;
+  display: inline;
+  list-style: none;
+  margin-right: 20px;
 }
