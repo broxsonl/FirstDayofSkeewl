@@ -1,29 +1,55 @@
 /* =========================
 ABOUT STRUCTURE STYLES
 ========================= */
+* {
+  outline: 1px dotted orange;
+  background-image: url('../../img/bg_pattern.jpg');
+}
 
 .main_wrap {
   margin: 50px;
+  background-image: url('../../img/ghostbackground.jpg');
 }
 
 .img_header,
 .student_flex {
   display: flex;
+  border-radius: 100%;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  border-radius: 100%;
+  background-image: url('../../img/ghostbackground.jpg');
 }
 
 .about_section {
   text-align: center;
   margin: 100px 50px;
+  /*color: white;*/
+  color: #5DFC0A;
+  background-image: url('../../img/ghostbackground.jpg');
+
 }
 
 .student_flex p {
   margin-left: 50px;
+  color: white;
+  background-image: url('../../img/ghostbackground.jpg');
 }
 
 .student_flex p span {
-  font-weight: 700;
+  font-weight: 700px;
   font-size: 20px;
+  /*color: white*/
+  color: #5DFC0A;
+  background-image: url('../../img/ghostbackground.jpg');
+}
+/*.img_header {
+  border-radius: 100%;
+}*/
+.img_header img {
+  border-radius: 100%;
+}
+.student_flex img {
+  border-radius: 100%;
 }
