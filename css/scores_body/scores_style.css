@@ -1,12 +1,14 @@
 h1 {
   text-align: center;
   outline: dotted 1px orange;
+  color: #5DFC0A;
 }
 section {
   border-style: solid;
   outline: dotted 1px orange;
   padding: 20px;
-  background-color: #5DFC0A;
+  background-color: #000;
+  width: 100%;
   /*text-align: center;*/
 }
 button {
@@ -16,11 +18,27 @@ button {
   font-size: 18px;
   border-radius: 3px;
   cursor: pointer;
-  background: #000;
-  color: #fff;
+  background: #6D7172;
+  color: #5DFC0A;
   transition: 350ms all;
 }
 button:hover {
   background: #444;
-  color: #000;
+  color: #5DFC0A;
+}
+.high_scores {
+  background-image: url('../../img/chalkboard_bg.jpeg');
+  background-position: center;
+  background-size: cover;
+  height: 350px;
+  width: 80%;
+  margin: 100px;
+  color: #5DFC0A;
+
+  /*border: #5dfc0a solid 5px;*/
+}
+.user_name {
+  float: left;
+  width: 50%;
+  background-position: center;
 }
