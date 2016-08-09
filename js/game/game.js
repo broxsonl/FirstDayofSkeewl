@@ -100,4 +100,3 @@ var caption = "You are done with school. You have had a long day with lots of up
 var choseRouteEvent = new Event
 
 gameManager.showEvent("BusEvent");
->>>>>>> 9672a9620f946a7d9f0c5371d32230051268b014
