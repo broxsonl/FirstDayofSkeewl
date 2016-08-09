@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/game_body/game_style.css">
+    <link rel="stylesheet" href="css/scores_body/scores_style.css">
     <link rel="stylesheet" href="css/main.css">
 
     <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
@@ -27,14 +27,53 @@
         </nav>
       </header>
 
+      <div class="main_content">
+
       <section>
         <h1>High Scores</h1>
-        <div class="high_scores">
-          <div class="user_name">User Name</div>
-          <div class="Score">High Score</div>
-        </div> <!-- .heigh_scores -->
-        <button>Play Again</button>
+
+        <div class="scores_table_flex">
+
+        <div id="tableWrap">
+          <table>
+            <tr>
+              <td>Rank</td>
+              <td>Name</td>
+              <td>Score</td>
+            </tr>
+
+            <tr>
+              <td>1st</td>
+              <td>Sera</td>
+              <td>1000 CP</td>
+            </tr>
+
+            <tr>
+              <td>2nd</td>
+              <td>Lee</td>
+              <td>900 CP</td>
+            </tr>
+
+            <tr>
+              <td>3rd</td>
+              <td>Tai</td>
+              <td>800 CP</td>
+            </tr>
+
+            <tr>
+              <td>4th</td>
+              <td>Adrian</td>
+              <td>10 CP</td>
+            </tr>
+          </table>
+        </div> <!-- #tableWrap -->
+
+        <a href="#"><button>Play Again!</button></a>
       </section>
+
+    </div><!-- .scores_table_flex -->
+
+      </div> <!-- .main_content -->
 
       <footer>
         <a href="index.html"><img src="http://placehold.it/75x75"></a>
@@ -48,7 +87,7 @@
         </nav>
       </footer>
 
-    </div> <!-- .wrapper -->
+      </div> <!-- .wrapper -->
 
     <script src="js/scores/scores.js"></script>
   </body>
