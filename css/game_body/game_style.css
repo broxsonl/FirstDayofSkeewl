@@ -25,7 +25,7 @@ GAME STRUCTURE STYLES
   background-position: center;
   background-size: cover;
   height: 450px;
-  width: 50%;
+  width: 60%;
   padding: 0 10px;
   color: #5dfc0a;
 
@@ -34,8 +34,55 @@ GAME STRUCTURE STYLES
 
 .instructions_content,
 .points_content {
-  background-color: #fff;
+  /*background-color: #fff;*/
   width: 25%;
   height: 450px;
   padding: 0 10px;
+  color: #5dfc0a
+}
+
+.instructions_content {
+  border: 5px solid #5dfc0a;
+}
+
+.instructions_content h2 {
+  font-size: 30px;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.instructions_content li {
+  list-style: decimal;
+  margin: 30px;
+  margin-left: 20px;
+  margin-right: 0px;
+  font-size: 20px;
+}
+
+.instructions_content span {
+  text-decoration: underline;
+}
+
+.instructions_content p {
+  text-align: center;
+  font-size: 20px;
+  margin-top: -15px;
+}
+
+.page_title {
+  font-family: 'Press Start 2P', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #5dfc0a;
+  text-align: center;
+
+  max-width: 600px;
+  background-color: #000;
+  margin: 20px auto;
+  border: 2px solid #152614;
+  padding: 20px;
+}
+
+.content_container {
+
 }
