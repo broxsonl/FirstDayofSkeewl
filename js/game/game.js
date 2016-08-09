@@ -201,3 +201,77 @@ function scenarioSeven() {
     youLose();
   }
 }
+
+
+
+////
+
+'use strict';
+
+var points = 0;
+var allChoices = [];
+
+
+
+// function storyPoint () {
+// - create fluff element <p>
+// - append element
+// - text content
+// }
+
+function Choice (ID, Caption, and Event) {
+  this.ID = ID;
+  this.Caption = Caption;
+  this.Event = Event;
+}
+
+allChoices.push(this)
+
+//////////Choice Events/////////
+
+// Obstacle 1- Sit in front/back of the bus
+var backOfBusEvent = new Event("You chose the front, what next?", backBusChoices, false, false)
+
+
+var backOfBusEvent = new Event("You chose the back, what next?", backBusChoices, false, false)
+
+var choices = []
+choices.push(new Choice("CHOICE_FRONT", "Front", frontOfBusEvent));
+choices.push(new Choice("CHOICE_BACK", "Back", backOfBusEvent));
+var caption = "You get on the bus and you see your crush.  Where do you want to sit?";
+var choseSeatEvent = new Event(caption, choices, false, false);
+
+
+// Obstacle 2- Jessica drops pen
+var choices = []
+choices.push(new Choice("CHOICE-PICKUP", "Pick-up", pickUpPenEvent));
+choices.push(new Choice("CHOICE-NOPICKUP", "No-pick-up", noPickUpPenEvent));
+var caption = "You are now walking towards your seat, and Jessica drops her pen. Do you pick up the pen for her or keep walking because you are too nervous to talk to and approach Jessica?";
+var chosePenEvent = new Event(caption, choices, false, false);
+
+// Obstacle 3- Left tag on Shirt
+
+// Obstacle 4- 1st prd: Algebra; sit in FRONT w/ Jessica or BACK of class
+
+// Obstacle 5- Solve algebraic equation
+
+// Obstacle 6- Lunch
+var choices = []
+choices.push(new Choice("CHOICE-BOXLUNCH", "", ));
+choices.push(new Choice("CHOICE-CHKNBURGER", "", ));
+var caption = "You are now at lunch. You have a choice of pulling out your Ninja Turtle box lunch that your mom packed. Or, you can choose out of the 3 choices which includes: chicken burger, sloppy joe, or mystery meat corndog. Which do you choose? The lunch your mom packed which you know to be safe? Or, take your chances with one of the school lunch choices?";
+var choseLunchEvent = new Event(caption, choices, false, false);
+
+// Obstacle 7- 3rd period
+var choices = []
+choices.push(new Choice("CHOICE-DESANI", "", ));
+choices.push(new Choice("CHOICE-CAMELBACK", "", ));
+var caption = "You realize you are thirsty during English class. You can either fill up you CamelBack waterbottle, or, go and buy a chilled Dasani for $3.59. Should you use your left-over lunch money for a Dasani water, or fill your Camelback. Jessica is watching.";
+var choseWaterEvent = new Event(caption, choices, false, false);
+
+// Obstacle 8- After School --> Go home
+var choices = []
+choices.push(new Choice("CHOICE-SHORTROUTE", "", ));
+choices.push(new Choice("CHOICE-SCENICROUTE", "", ));
+var caption = "You are done with school. You have had a long day with lots of ups and downs, and warnm out from all teh obstacles that you've endured. You zit on you forehead is getting bigger and you just want to go home. Do you take the short route and get home faster? Or take the longer, more scenic route and decompress before mom bombards you with questions about The First Day. Jessica also sometimes takes the short route.";
+var choseRouteEvent = new Event(caption, choices, false, false);
