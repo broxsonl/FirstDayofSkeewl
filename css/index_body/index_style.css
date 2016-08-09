@@ -17,8 +17,8 @@ section h1 {
 }
 
 section p {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 18px;
+  font-family: 'Schoolbell', sans-serif;
+  font-size: 20px;
   color: #eaf0ce;
 
   text-align: center;
@@ -26,6 +26,17 @@ section p {
   max-width: 500px;
   margin: 20px auto;
   padding: 20px;
+}
+
+.kicker_text {
+  font-family: 'Schoolbell', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #eaf0ce;
+
+  text-align: center;
+  line-height: 1.5em;
+  max-width: 500px;
 }
 
 section img {
@@ -54,7 +65,7 @@ button {
   color: #eaf0ce;
   text-shadow: 3px 3px 2px #000;
 
-  margin-top: 40px;
+  margin: 40px auto;
   border: 2px solid #000;
   border-radius: 8px;
     -webkit-border-radius: 8;
