@@ -2,6 +2,7 @@
 MAIN CONTENT STYLES
 ======================================== */
 
+/* styling "High Scores" title */
 section h1 {
   font-family: 'Press Start 2P', sans-serif;
   font-size: 16px;
@@ -16,6 +17,7 @@ section h1 {
   padding: 20px;
 }
 
+/* flex container holding table that centers data in middle of page */
 .scores_table_flex {
   display: flex;
   flex-direction: column;
@@ -23,6 +25,7 @@ section h1 {
   align-items: center;
 }
 
+/* styling for data that's inputted into the table */
 #tableWrap {
   font-family: 'Press Start 2P', sans-serif;
   font-size: 16px;
@@ -35,6 +38,7 @@ section h1 {
   padding: 10px 15px;
 }
 
+/* styling for play again button that links to game.html */
 button {
   background: #152614;
   background-image: -webkit-linear-gradient(top, #152614, #5dfc0a);
@@ -56,6 +60,7 @@ button {
   padding: 10px 20px 10px 20px;
 }
 
+/* hover psudeo class for button*/
 button:hover {
   background: #152614;
   background-image: -webkit-linear-gradient(top, #5dfc0a, #152614);
