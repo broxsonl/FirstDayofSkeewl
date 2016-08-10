@@ -35,12 +35,12 @@ GAME STRUCTURE STYLES
   width: 25%;
   height: 450px;
   padding: 0 10px;
-  color: #5dfc0a
 }
 
 .instructions_content h2 {
   font-size: 14px;
   font-family: 'Press Start 2P', sans-serif;
+  color: #5dfc0a;
   text-decoration: underline;
 }
 
@@ -48,6 +48,7 @@ GAME STRUCTURE STYLES
   margin: 20px 0 20px 0;
   font-size: 14px;
   font-family: 'Schoolbell', sans-serif;
+  color: #fff;
 }
 
 .instructions_content span {
@@ -57,6 +58,7 @@ GAME STRUCTURE STYLES
 .instructions_content p {
   font-size: 14px;
   font-family: 'Press Start 2P', sans-serif;
+  color: #5dfc0a;
 }
 
 .page_title {
@@ -94,7 +96,7 @@ button {
 
   font-family: 'Press Start 2P', sans-serif;;
   font-size: 20px;
-  color: #eaf0ce;
+  color: #fff;
   text-shadow: 3px 3px 2px #000;
   text-align: center;
 
