@@ -117,3 +117,33 @@ button:hover {
   background-image: linear-gradient(to bottom, #5dfc0a, #152614);
   cursor: pointer;
 }
+
+/* =========================
+GAME ANIMATED TEXT
+========================= */
+
+/* blinking cursor */
+/*span {
+animation: blink 1s infinite;
+}
+
+@keyframes blink{
+to{opacity: .0;}
+}*/
+
+.css_typing {
+  font-family: "Courier";
+  font-size: 20px;
+  color: #5dfc0a;
+
+  margin: 10px 0 0 10px;
+
+  white-space: pre-wrap;
+  overflow: hidden;
+  width: 525px;
+  animation: type 5s steps(50, end);
+}
+
+@keyframes type {
+  from { width: 0; }
+}
