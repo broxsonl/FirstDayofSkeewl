@@ -80,6 +80,10 @@ GAME STRUCTURE STYLES
   align-items: center;
 }
 
+#intro_text {
+  display: none;
+}
+
 button {
   background: #152614;
   background-image: -webkit-linear-gradient(top, #152614, #5dfc0a);

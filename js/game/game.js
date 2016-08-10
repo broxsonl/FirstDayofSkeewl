@@ -13,8 +13,8 @@ var y = Math.floor(Math.random() * (5 + 1));
 var gameWindow = document.getElementById('game_Window');
 var gameText = document.createElement('p');
 var gameStart = document.getElementById('game_start');
-var gameWin = document.createElement();
-var gameLose = document.createElement();
+// var gameWin = document.createElement();
+// var gameLose = document.createElement();
 //The array for created objects from the scenario creator to be pushed to.
 
 // ++++++++++++++++++++++++++++++++++++++++++++
@@ -68,6 +68,20 @@ function Scenario(question, answer) {
   this.answer = answer;
 };
 
+// pushes instantiated scenario objects to scenario array
 for (var i = 0; i < question.length; i++) {
   scenario.push(new Scenario(question[i], answer[i]));
 };
+
+function introText() {
+  var start_btn = document.getElementById('game_start');
+
+  start_btn.addEventListener('click', function() {
+    var intro = document.getElementById('intro_text');
+    intro.style.display = 'block';
+  });
+};
+
+introText();
+
+console.log('scenarios', scenario);
