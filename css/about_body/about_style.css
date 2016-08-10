@@ -1,15 +1,6 @@
 /* =========================
 ABOUT STRUCTURE STYLES
 ========================= */
-* {
-  outline: 1px dotted orange;
-  background-image: url('../../img/bg_pattern.jpg');
-}
-
-.main_wrap {
-  margin: 50px;
-  background-image: url('../../img/ghostbackground.jpg');
-}
 
 .img_header,
 .student_flex {
@@ -19,7 +10,7 @@ ABOUT STRUCTURE STYLES
   justify-content: space-around;
   align-items: center;
   border-radius: 100%;
-  background-image: url('../../img/ghostbackground.jpg');
+  background-color: black;
 }
 
 .about_section {
@@ -27,14 +18,14 @@ ABOUT STRUCTURE STYLES
   margin: 100px 50px;
   /*color: white;*/
   color: #5DFC0A;
-  background-image: url('../../img/ghostbackground.jpg');
+  background-color: black;
 
 }
 
 .student_flex p {
-  margin-left: 50px;
+  margin: 50px 30px;
   color: white;
-  background-image: url('../../img/ghostbackground.jpg');
+  /*background-color: black;*/
 }
 
 .student_flex p span {
@@ -42,11 +33,8 @@ ABOUT STRUCTURE STYLES
   font-size: 20px;
   /*color: white*/
   color: #5DFC0A;
-  background-image: url('../../img/ghostbackground.jpg');
 }
-/*.img_header {
-  border-radius: 100%;
-}*/
+
 .img_header img {
   border-radius: 100%;
 }
