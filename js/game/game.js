@@ -13,6 +13,7 @@ var y = Math.floor(Math.random() * (5 + 1));
 var gameWindow = document.getElementById('game_Window');
 var gameText = document.createElement('p');
 var gameStart = document.getElementById('game_start');
+var counter = 0;
 // var gameWin = document.createElement();
 // var gameLose = document.createElement();
 //The array for created objects from the scenario creator to be pushed to.
@@ -73,15 +74,134 @@ for (var i = 0; i < question.length; i++) {
   scenario.push(new Scenario(question[i], answer[i]));
 };
 
+// start intro text when clicking "Play Game"
 function introText() {
   var start_btn = document.getElementById('game_start');
 
+  // show intro text
   start_btn.addEventListener('click', function() {
     var intro = document.getElementById('intro_text');
     intro.style.display = 'block';
   });
 };
 
+function dead() {
+  // add death function here
+}
+
+function startGame() {
+  var answerField = document.getElementById('answer_field');
+
+  // check for enter key press
+  document.addEventListener('keydown', function(e) {
+    var content = '<form id="answer_field">' +
+                    '<span>' + scenario[0].question + '</span>' +
+                    '<input id="answer" type="text" name="' + scenario[0].answer +'" value="">' +
+                  '</form>';
+
+    if (e.which === 13) {
+      if (counter === 0) {
+        gameWindow.innerHTML = content;
+        counter++;
+      } else {
+        e.preventDefault();
+        var currentAnswer = document.getElementById('answer').value.toUpperCase();
+        if (currentAnswer.indexOf(scenario[0].answer) > -1) {
+          console.log('got it');
+          // add got it right text
+          // alert('you got it right, press enter to proceed');
+          // track score
+          scenario2();
+        } else {
+          // call death function here
+          console.log('got it wrong');
+        }
+      }
+    }
+  });
+}
+
+function scenario2() {
+  var answerField = document.getElementById('answer_field');
+
+  gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
+
+  // check for enter key press
+  document.addEventListener('keydown', function(e) {
+    var content = '<form id="answer_field">' +
+                    '<span>' + scenario[1].question + '</span>' +
+                    '<input id="answer" type="text" name="' + scenario[1].answer +'" value="">' +
+                  '</form>';
+
+    if (e.which === 13) {
+      console.log('counter', counter);
+      if (counter === 1) {
+        gameWindow.innerHTML = content;
+        counter++;
+      } else {
+        e.preventDefault();
+        var currentAnswer = document.getElementById('answer').value.toUpperCase();
+        if (currentAnswer.indexOf(scenario[1].answer) > -1) {
+          console.log('got it');
+          // add got it right text
+          // track score
+          scenario3();
+        } else {
+          // call death function here
+          console.log('got it wrong');
+        }
+      }
+    }
+  });
+}
+
+function scenario3() {
+  var answerField = document.getElementById('answer_field');
+
+  // gameWindow.removeChild(answerField);
+  gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
+
+  // check for enter key press
+  document.addEventListener('keydown', function(e) {
+    var content = '<form id="answer_field">' +
+                    '<span>' + scenario[2].question + '</span>' +
+                    '<input id="answer" type="text" name="' + scenario[2].answer +'" value="">' +
+                  '</form>';
+
+    if (e.which === 13) {
+      console.log('counter', counter);
+      if (counter === 2) {
+        gameWindow.innerHTML = content;
+        counter++;
+      } else {
+        e.preventDefault();
+        var currentAnswer = document.getElementById('answer').value.toUpperCase();
+        if (currentAnswer.indexOf(scenario[2].answer) > -1) {
+          console.log('got it');
+          // add got it right text
+          // track score
+          // scenario2();
+        } else {
+          // call death function here
+          console.log('got it wrong');
+        }
+      }
+    }
+  });
+}
+
+
+function questions() {
+  var inputVal = document.getElementById('answer').value;
+
+  if (answer[0].indexOf(inputVal) > -1) {
+    console.log(answer[0]);
+  } else {
+    alert('you suck');
+  }
+}
+
 introText();
+startGame();
 
 console.log('scenarios', scenario);
