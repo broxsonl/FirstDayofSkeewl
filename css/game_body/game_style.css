@@ -14,27 +14,26 @@ GAME STRUCTURE STYLES
 
 .flex_container {
   display: flex;
-  flex-direction: col;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  height: 750px;
 }
 
 .game_Window {
   background-image: url('../../img/chalkboard_bg.jpeg');
   background-position: center;
   background-size: cover;
-  height: 450px;
-  width: 60%;
-  padding: 0 10px;
   color: #5dfc0a;
+  height: 450px;
+  width: 90%;
+  margin: 50px;
+  padding: 0 10px;
 }
 
-.instructions_content,
-.points_content {
-  width: 25%;
-  height: 450px;
+.instructions_content {
+  width: 50%;
   padding: 0 10px;
+  margin-bottom: 50px;
 }
 
 .instructions_content h2 {
@@ -75,16 +74,9 @@ GAME STRUCTURE STYLES
   padding: 20px;
 }
 
-.play_now_flex {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#intro_text {
+/*#intro_text {
   display: none;
-}
+}*/
 
 button {
   background: #152614;
@@ -100,7 +92,7 @@ button {
   text-shadow: 3px 3px 2px #000;
   text-align: center;
 
-  margin-bottom: 100px;
+  margin-bottom: 20px;
   border: 2px solid #000;
   border-radius: 8px;
     -webkit-border-radius: 8;
