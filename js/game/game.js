@@ -23,9 +23,9 @@ var counter = 0;
 var scenario = [];
 
 //ARRAY OF QUESTIONS
-var question = ['It\'s the first day of middle school.  You\'re standing alone at the bus stop. You\'re nervous about your first day, and think that it might just be best to skip school today. Then again, they always tell you to stay in school... Do you SKIP school, or ride the BUS?',
+var question = ['On the morning of the first day of middle school, you find yourself standing alone at the bus stop. Grade school went okay, but youhave heard from your older brother that middle school is a whole different story. As a result, you\'re nervous about your first day, and think that maybe you\'ll just skip school today. Then again, they always tell you to stay in school... Do you SKIP school, or RIDE THE BUS?',
 
-'As you walk onto the bus, you look around nervously for a place to sit. You spot an empty seat all the way in the back of the bus with the cool kids, and an empty seat in the front row, only a few feet away. Do you sit in the BACK or FRONT?',
+'As you walk onto the bus, you look around nervously for a place to sit. You spot an empty seat all the way at the back of the bus with the cool kids, and an empty seat in the front row, only a few feet away. Do you sit in the BACK or FRONT?',
 
 'Near you on the bus, your elementary school crush, Jessica, drops her pen. You have always been too nervous to talk to Jessica. Do you choose to overcome your fear and PICK UP the pen and hand it to her, or avoid eye contact and WALK AWAY?',
 
@@ -61,7 +61,7 @@ var question = ['It\'s the first day of middle school.  You\'re standing alone a
 
 ];
 
-var answer = ['BUS', 'FRONT', 'WALK AWAY', 'FRIENDS', (x * y), 'CLASS', 'BELCH', 'CAMELBACK', 'SLOPPY JOES', 'SAY HELLO', 'IGNORE', 'DECLINE', 'RUN', 'PARTICIPATE', 'PLAY', 'JESSICA', 'TATTLE', 'LEARNED A LOT'];
+var answer = ['RIDE THE BUS', 'FRONT', 'WALK AWAY', 'FRIENDS', (x * y), 'CLASS', 'BELCH', 'CAMELBACK', 'SLOPPY JOES', 'SAY HELLO', 'IGNORE', 'DECLINE', 'RUN', 'PARTICIPATE', 'PLAY', 'JESSICA', 'TATTLE', 'LEARNED A LOT'];
 
 function Scenario(question, answer) {
   this.question = question;
@@ -107,13 +107,17 @@ function startGame() {
         var currentAnswer = document.getElementById('answer').value.toUpperCase();
         if (currentAnswer.indexOf(scenario[0].answer) > -1) {
           console.log('Question 1 right');
+<<<<<<< HEAD
           gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
           // alert('you got it right, press enter to proceed');
+=======
+          gameWindow.innerHTML = '<span>You decide to wait it out for the bus to arrive. It eventually pulls up a few minutes late. The door to the bus flies open with a whirr revealing the driver with a disapproving look on his face. "Hurry up and get on, kid," he tells you. "I ain\'t getting older." You quickly run onto the bus and the door shuts quickly behind you. GAIN 100 POINTS.</span>';
+>>>>>>> 6b94997f70671f5299acd2ee5d66cc811fd655a9
           points += 100;
           scenario2();
         } else {
           // call death function here
-          console.log('Question 2 wrong');
+          console.log('Question 1 wrong');
         }
       }
     }
@@ -144,7 +148,11 @@ function scenario2() {
         var currentAnswer = document.getElementById('answer').value.toUpperCase();
         if (currentAnswer.indexOf(scenario[1].answer) > -1) {
           console.log('got it');
+<<<<<<< HEAD
           gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
+=======
+          gameWindow.innerHTML = '<span>As the bus begins to move, you make your way to the open seat at the front. At the next bus stop, Jessica, your crush from elementary school, walks onto the bus. In what feels like a scene out of a movie, time slows down and Jessica walks in slow motion and sits down in the open seat next to you. You blush excitedly for the rest of the ride, despite not quite having the nerve to talk to her. GAIN 100 POINTS</span>';
+>>>>>>> 6b94997f70671f5299acd2ee5d66cc811fd655a9
           points += 100;
           scenario3();
         } else {
@@ -718,5 +726,3 @@ function scenario18() {
 
 introText();
 startGame();
-
-console.log('scenarios', scenario);
