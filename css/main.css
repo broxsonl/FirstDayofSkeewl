@@ -7,7 +7,7 @@ UNIVERSAL STYLES
 
 body {
   background-image: url('../img/bg_pattern.jpg');
-  /*max-width: 960px;*/
+  max-width: 960px;
   margin: 0 auto;
 }
 
@@ -18,14 +18,14 @@ a {
 /* sticky footer using flexbox */
 
 .wrapper {
-  /*display: flex;
-  flex-direction: column;*/
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
 }
 
 .main_content {
   flex-grow: 1;
-  /*background-image: url('../img/bg_inner.png');*/
+  background-image: url('../img/bg_inner.png');
 }
 
 

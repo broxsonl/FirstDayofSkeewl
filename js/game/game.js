@@ -109,7 +109,7 @@ function startGame() {
           console.log('Question 1 right');
           gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
           // alert('you got it right, press enter to proceed');
-          points += 100
+          points += 100;
           scenario2();
         } else {
           // call death function here
@@ -145,7 +145,7 @@ function scenario2() {
         if (currentAnswer.indexOf(scenario[1].answer) > -1) {
           console.log('got it');
           gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
-          points += 100
+          points += 100;
           scenario3();
         } else {
           // call death function here
@@ -180,7 +180,7 @@ function scenario3() {
         if (currentAnswer.indexOf(scenario[2].answer) > -1) {
           console.log('got it');
           gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
-          points += 100
+          points += 100;
           scenario4();
         } else {
           // call death function here
@@ -215,7 +215,7 @@ function scenario4() {
         if (currentAnswer.indexOf(scenario[3].answer) > -1) {
           console.log('got it');
           gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
-          points += 100
+          points += 100;
           scenario5();
         } else {
           // call death function here
@@ -250,7 +250,7 @@ function scenario5() {
         if (currentAnswer.indexOf(scenario[4].answer) > -1) {
           console.log('got it');
           gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
-          points += 100
+          points += 100;
           scenario6();
         } else {
           // call death function here
@@ -285,7 +285,7 @@ function scenario6() {
         if (currentAnswer.indexOf(scenario[5].answer) > -1) {
           console.log('got it');
           gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
-          points += 100
+          points += 100;
           scenario7();
         } else {
           // call death function here
@@ -320,7 +320,7 @@ function scenario7() {
         if (currentAnswer.indexOf(scenario[6].answer) > -1) {
           console.log('got it');
           gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
-          points += 100
+          points += 100;
           scenario8();
         } else {
           // call death function here
@@ -355,7 +355,7 @@ function scenario8() {
         if (currentAnswer.indexOf(scenario[7].answer) > -1) {
           console.log('got it');
           gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
-          points += 100
+          points += 100;
           scenario9();
         } else {
           // call death function here
@@ -365,7 +365,6 @@ function scenario8() {
     }
   });
 }
-
 
 function scenario9() {
   var answerField = document.getElementById('answer_field');
@@ -391,7 +390,7 @@ function scenario9() {
         if (currentAnswer.indexOf(scenario[8].answer) > -1) {
           console.log('got it');
           gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
-          points += 100
+          points += 100;
           scenario10();
         } else {
           // call death function here
@@ -426,7 +425,7 @@ function scenario10() {
         if (currentAnswer.indexOf(scenario[9].answer) > -1) {
           console.log('got it');
           gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
-          points += 100
+          points += 100;
           scenario11();
         } else {
           // call death function here
@@ -461,7 +460,7 @@ function scenario11() {
         if (currentAnswer.indexOf(scenario[10].answer) > -1) {
           console.log('got it');
           gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
-          points += 100
+          points += 100;
           scenario12();
         } else {
           // call death function here
@@ -496,7 +495,7 @@ function scenario12() {
         if (currentAnswer.indexOf(scenario[11].answer) > -1) {
           console.log('got it');
           gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
-          points += 100
+          points += 100;
           scenario13();
         } else {
           // call death function here
@@ -531,7 +530,7 @@ function scenario13() {
         if (currentAnswer.indexOf(scenario[12].answer) > -1) {
           console.log('got it');
           gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
-          points += 100
+          points += 100;
           scenario14();
         } else {
           // call death function here
@@ -566,7 +565,7 @@ function scenario14() {
         if (currentAnswer.indexOf(scenario[13].answer) > -1) {
           console.log('got it');
           gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
-          points += 100
+          points += 100;
           scenario15();
         } else {
           // call death function here
@@ -601,7 +600,7 @@ function scenario15() {
         if (currentAnswer.indexOf(scenario[14].answer) > -1) {
           console.log('got it');
           gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
-          points += 100
+          points += 100;
           scenario16();
         } else {
           // call death function here
@@ -636,7 +635,7 @@ function scenario16() {
         if (currentAnswer.indexOf(scenario[15].answer) > -1) {
           console.log('got it');
           gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
-          points += 100
+          points += 100;
           scenario17();
         } else {
           // call death function here
@@ -671,7 +670,7 @@ function scenario17() {
         if (currentAnswer.indexOf(scenario[16].answer) > -1) {
           console.log('got it');
           gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
-          points += 100
+          points += 100;
           scenario18();
         } else {
           // call death function here
@@ -706,7 +705,7 @@ function scenario18() {
         if (currentAnswer.indexOf(scenario[17].answer) > -1) {
           console.log('got it');
           gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
-          points += 100
+          points += 100;
           scenario19();
         } else {
           // call death function here
@@ -716,16 +715,6 @@ function scenario18() {
     }
   });
 }
-
-// function questions() {
-//   var inputVal = document.getElementById('answer').value;
-//
-//   if (answer[0].indexOf(inputVal) > -1) {
-//     console.log(answer[0]);
-//   } else {
-//     alert('you suck');
-//   }
-// }
 
 introText();
 startGame();
