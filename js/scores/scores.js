@@ -5,7 +5,6 @@ var scores, rank;
 function scoreBoard(){
   var position = 1;
   for (var i = scores.length - 1; i > -1; i--) {
-  // for (var i = scores.length; i < ; i++) {
     var tr = document.createElement('tr');
     var rank = document.createElement('td');
     var user = document.createElement('td');
@@ -29,6 +28,10 @@ function scoreLocal() {
   } else {
     scores = [{user:'Charlie ',score: 500}, {user: 'Caroline ', score: 200}, {user: 'Scotty ', score: 400}, {user: 'Devin ', score: 300}, {user: 'Munir ', score: 500}];
   }
+  scores.sort(function(a, b) {
+
+    return a.score > b.score;
+  });
 }
 
 scoreLocal();
