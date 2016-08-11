@@ -20,11 +20,11 @@ video {
 
 section h1 {
   font-family: 'Press Start 2P', sans-serif;
-  font-size: 16px;
+  font-size: 40px;
   font-weight: 700;
   color: #5dfc0a;
   text-align: center;
-
+  opacity: .7;
   max-width: 600px;
   background-color: #000;
   margin: 20px auto;
@@ -97,4 +97,54 @@ button:hover {
   background-image: -o-linear-gradient(top, #5dfc0a, #152614);
   background-image: linear-gradient(to bottom, #5dfc0a, #152614);
   cursor: pointer;
+}
+
+
+header{
+  /*border: #000 solid 5px;*/
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+  opacity: 1;
+  color: #5dfc0a;
+}
+
+header img {
+  max-width: 90px;
+  margin: 0 15px;
+  border-radius: 100%;
+  opacity: .8;
+}
+
+header nav{
+  margin: 0 50px;
+
+}
+
+header nav a
+a:visited {
+}
+
+/*header nav a:hover {
+  color: #5dfc0a;
+}*/
+
+nav ul li {
+  font-family: 'Press Start 2P', sans-serif;
+  font-size: 14px;
+  display: inline;
+  margin-right: 20px;
+  margin-left: 100px;
+  color: #5dfc0a;
+}
+
+nav ul li a {
+  color: #5dfc0a;
+  opacity: 1;
+  font-size: 20px;
+  font-weight: bold;
 }

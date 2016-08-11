@@ -122,29 +122,55 @@ button:hover {
 GAME ANIMATED TEXT
 ========================= */
 
-/* blinking cursor */
-/*span {
-animation: blink 1s infinite;
+
+@keyframes typing {
+    from { width: 100% }
+    to { width: 0 }
+
 }
 
-@keyframes blink{
-to{opacity: .0;}
-}*/
+.game_Window {
+  position: relative;
+  font-family: Consolas, monospace;
+}
 
 .css_typing {
-  font-family: "Courier";
-  font-size: 20px;
   color: #5dfc0a;
-
-  margin: 10px 0 0 10px;
-
-  white-space: nowrap;
-  overflow: hidden;
-  width: 525px;
-  animation: type 5s steps(100, end);
+  position: absolute;
+  top: 0;
+  margin: 0;
+  z-index: -1;
 }
 
-@keyframes type {
-  from { width: 0; }
-  to { width: 525px; }
+.hiders {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  width: 85%;
+  margin: 30px;
+}
+
+.hiders p {
+  color: #5dfc0a;
+  position: relative;
+  clear: both;
+  margin: 0;
+  float: right; /* makes animation go left-to-right */
+  width:0; /* graceful degradation: if animation doesn't work, these are invisible by default */
+  background: black; /* same as page background */
+  animation: typing 2s steps(30, end);
+  animation-fill-mode: both;  /* load first keyframe on page load, leave on last frame at end */
+}
+
+.hiders p:nth-child(2) {
+  animation-delay: 2s;
+}
+.hiders p:nth-child(3) {
+  animation-delay: 4s;
+}
+.hiders p:nth-child(4) {
+  animation-delay: 6s;
+}
+.hiders p:nth-child(5) {
+  animation-delay: 8s;
 }
