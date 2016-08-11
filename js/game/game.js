@@ -3,6 +3,7 @@
 // DATA - Global Variable declarations
 // ++++++++++++++++++++++++++++++++++++++++++++
 var points = 0;
+
 //Math variables for the math question scenario
 var x = Math.floor(Math.random() * (15 + 1)) + 2;
 var y = Math.floor(Math.random() * (5 + 1)) + 2;
@@ -12,10 +13,11 @@ var y = Math.floor(Math.random() * (5 + 1)) + 2;
 var gameWindow = document.getElementById('game_Window');
 var gameText = document.createElement('p');
 var gameStart = document.getElementById('game_start');
+var start_btn = document.getElementById('game_start');
 var counter = 0;
 // var gameWin = document.createElement();
 // var gameLose = document.createElement();
-//The array for created objects from the scenario creator to be pushed to.
+// The array for created objects from the scenario creator to be pushed to.
 
 // ++++++++++++++++++++++++++++++++++++++++++++
 // Scenario, Question and Answer Arrays
@@ -74,22 +76,12 @@ for (var i = 0; i < question.length; i++) {
 };
 
 // start intro text when clicking "Play Game"
-function introText() {
-  var start_btn = document.getElementById('game_start');
 
-  // show intro text
-  start_btn.addEventListener('click', function() {
-    var intro = document.getElementById('intro_text');
-    intro.style.display = 'block';
-  });
-};
-
-function death() {
-  // add death function here
-}
+// function death() {
+//   // add death function here
+// }
 
 function startGame() {
-  var answerField = document.getElementById('answer_field');
 
   // check for enter key press
   document.addEventListener('keydown', function(e) {
@@ -120,9 +112,6 @@ function startGame() {
 }
 
 function scenario2() {
-  var answerField = document.getElementById('answer_field');
-
-  // gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
 
   // check for enter key press
   document.addEventListener('keydown', function(e) {
@@ -156,9 +145,8 @@ function scenario2() {
 }
 
 function scenario3() {
-  var answerField = document.getElementById('answer_field');
 
-  gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
+  // gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
 
   // check for enter key press
   document.addEventListener('keydown', function(e) {
@@ -178,7 +166,7 @@ function scenario3() {
         var currentAnswer = document.getElementById('answer').value.toUpperCase();
         if (currentAnswer.indexOf(scenario[2].answer) > -1) {
           console.log('got it');
-          gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
+          gameWindow.innerHTML = '<span>Herpderpderp</span>';
           points += 100;
           scenario4();
         } else {
@@ -191,9 +179,6 @@ function scenario3() {
 }
 
 function scenario4() {
-  var answerField = document.getElementById('answer_field');
-
-  gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
 
   // check for enter key press
   document.addEventListener('keydown', function(e) {
@@ -213,7 +198,7 @@ function scenario4() {
         var currentAnswer = document.getElementById('answer').value.toUpperCase();
         if (currentAnswer.indexOf(scenario[3].answer) > -1) {
           console.log('got it');
-          gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
+          gameWindow.innerHTML = '<span>Herpderpderp1</span>';
           points += 100;
           scenario5();
         } else {
@@ -226,9 +211,6 @@ function scenario4() {
 }
 
 function scenario5() {
-  var answerField = document.getElementById('answer_field');
-
-  gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
 
   // check for enter key press
   document.addEventListener('keydown', function(e) {
@@ -248,7 +230,7 @@ function scenario5() {
         var currentAnswer = document.getElementById('answer').value.toUpperCase();
         if (currentAnswer.indexOf(scenario[4].answer) > -1) {
           console.log('got it');
-          gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
+          gameWindow.innerHTML = '<span>Herpderpderp2</span>';
           points += 100;
           scenario6();
         } else {
@@ -261,9 +243,6 @@ function scenario5() {
 }
 
 function scenario6() {
-  var answerField = document.getElementById('answer_field');
-
-  gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
 
   // check for enter key press
   document.addEventListener('keydown', function(e) {
@@ -283,7 +262,7 @@ function scenario6() {
         var currentAnswer = document.getElementById('answer').value.toUpperCase();
         if (currentAnswer.indexOf(scenario[5].answer) > -1) {
           console.log('got it');
-          gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
+          gameWindow.innerHTML = '<span>Herpderpderp3</span>';
           points += 100;
           scenario7();
         } else {
@@ -296,9 +275,6 @@ function scenario6() {
 }
 
 function scenario7() {
-  var answerField = document.getElementById('answer_field');
-
-  gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
 
   // check for enter key press
   document.addEventListener('keydown', function(e) {
@@ -318,7 +294,7 @@ function scenario7() {
         var currentAnswer = document.getElementById('answer').value.toUpperCase();
         if (currentAnswer.indexOf(scenario[6].answer) > -1) {
           console.log('got it');
-          gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
+          gameWindow.innerHTML = '<span>Herpderpderp4</span>';
           points += 100;
           scenario8();
         } else {
@@ -331,9 +307,6 @@ function scenario7() {
 }
 
 function scenario8() {
-  var answerField = document.getElementById('answer_field');
-
-  gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
 
   // check for enter key press
   document.addEventListener('keydown', function(e) {
@@ -353,7 +326,7 @@ function scenario8() {
         var currentAnswer = document.getElementById('answer').value.toUpperCase();
         if (currentAnswer.indexOf(scenario[7].answer) > -1) {
           console.log('got it');
-          gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
+          gameWindow.innerHTML = '<span>Herpderpderp5</span>';
           points += 100;
           scenario9();
         } else {
@@ -366,9 +339,6 @@ function scenario8() {
 }
 
 function scenario9() {
-  var answerField = document.getElementById('answer_field');
-
-  gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
 
   // check for enter key press
   document.addEventListener('keydown', function(e) {
@@ -401,9 +371,6 @@ function scenario9() {
 }
 
 function scenario10() {
-  var answerField = document.getElementById('answer_field');
-
-  gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
 
   // check for enter key press
   document.addEventListener('keydown', function(e) {
@@ -436,9 +403,6 @@ function scenario10() {
 }
 
 function scenario11() {
-  var answerField = document.getElementById('answer_field');
-
-  gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
 
   // check for enter key press
   document.addEventListener('keydown', function(e) {
@@ -471,9 +435,6 @@ function scenario11() {
 }
 
 function scenario12() {
-  var answerField = document.getElementById('answer_field');
-
-  gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
 
   // check for enter key press
   document.addEventListener('keydown', function(e) {
@@ -506,9 +467,6 @@ function scenario12() {
 }
 
 function scenario13() {
-  var answerField = document.getElementById('answer_field');
-
-  gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
 
   // check for enter key press
   document.addEventListener('keydown', function(e) {
@@ -541,9 +499,6 @@ function scenario13() {
 }
 
 function scenario14() {
-  var answerField = document.getElementById('answer_field');
-
-  gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
 
   // check for enter key press
   document.addEventListener('keydown', function(e) {
@@ -576,9 +531,6 @@ function scenario14() {
 }
 
 function scenario15() {
-  var answerField = document.getElementById('answer_field');
-
-  gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
 
   // check for enter key press
   document.addEventListener('keydown', function(e) {
@@ -611,9 +563,6 @@ function scenario15() {
 }
 
 function scenario16() {
-  var answerField = document.getElementById('answer_field');
-
-  gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
 
   // check for enter key press
   document.addEventListener('keydown', function(e) {
@@ -646,9 +595,6 @@ function scenario16() {
 }
 
 function scenario17() {
-  var answerField = document.getElementById('answer_field');
-
-  gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
 
   // check for enter key press
   document.addEventListener('keydown', function(e) {
@@ -681,9 +627,6 @@ function scenario17() {
 }
 
 function scenario18() {
-  var answerField = document.getElementById('answer_field');
-
-  gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
 
   // check for enter key press
   document.addEventListener('keydown', function(e) {
@@ -715,5 +658,12 @@ function scenario18() {
   });
 }
 
-introText();
+// introText();
+// startGame();
 startGame();
+
+
+start_btn.addEventListener('click', function() {
+  var intro = document.getElementById('intro_text');
+  intro.style.display = 'block';
+});
