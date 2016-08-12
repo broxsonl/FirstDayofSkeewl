@@ -13,12 +13,32 @@ var y = Math.floor(Math.random() * (5 + 1)) + 2;
 var gameWindow = document.getElementById('game_Window');
 var gameText = document.createElement('p');
 var gameStart = document.getElementById('game_start');
-var start_btn = document.getElementById('game_start');
 var resultsButton = document.getElementById('results');
+var start_btn = document.getElementById('game_start');
 var counter = 0;
 // var gameWin = document.createElement();
 // var gameLose = document.createElement();
 // The array for created objects from the scenario creator to be pushed to.
+
+var isTag;
+var text;
+var content;
+
+function type() {
+  text = content.slice(0, ++i);
+  if (text === question[0]) return;
+
+  gameWindow.innerHTML = text;
+
+  var char = text.slice(-1);
+  if( char === '<' ) isTag = true;
+  if( char === '>' ) isTag = false;
+
+  if (isTag) return type();
+  setTimeout(type, 9);
+};
+
+
 
 // ++++++++++++++++++++++++++++++++++++++++++++
 // Scenario, Question and Answer Arrays
@@ -87,7 +107,7 @@ function startGame() {
 
   // check for enter key press
   document.addEventListener('keydown', function(e) {
-    var content = '<form id="answer_field">' +
+    content = '<form id="answer_field">' +
                     '<span>' + scenario[0].question + '</span>' +
                     '<input id="answer" type="text" name="' + scenario[0].answer +'" value="" autofocus>' +
                   '</form>';
@@ -95,17 +115,21 @@ function startGame() {
     if (e.which === 13) {
       if (counter === 0) {
         gameWindow.innerHTML = content;
+        setTimeout(function() {
+          document.getElementById('answer').focus();
+        }, 250);
         counter++;
       } else {
         e.preventDefault();
         var currentAnswer = document.getElementById('answer').value.toUpperCase();
         if (currentAnswer.indexOf(scenario[0].answer) > -1) {
           console.log('Question 1 right');
-          gameWindow.innerHTML = '<span>You decide to wait it out for the bus to arrive. It eventually pulls up a few minutes late. The door to the bus flies open with a whirr revealing the driver with a disapproving look on his face. "Hurry up and get on, kid," he tells you. "I ain\'t getting older." You quickly run onto the bus and the door shuts quickly behind you. <br><br> GAIN 100 POINTS <br><br>PRESS ENTER TO CONTINUE</span>';
+          gameWindow.innerHTML = '<span>You decide to wait it out for the bus to arrive. It eventually pulls up a few minutes late. The door to the bus flies open with a whirr revealing the driver with a disapproving look on his face. "Hurry up and get on, kid," he tells you. "I ain\'t getting older." You quickly run onto the bus and the door shuts quickly behind you. <br><br><span class="gain">GAIN</span> 100 POINTS <br><br>PRESS ENTER TO CONTINUE</span>';
           points += 100;
           scenario2();
         } else {
-          deathFunction();
+          // gameWindow.innerHTML = 'blahblahblah';
+          // deathFunction();
         }
       }
     }
@@ -133,12 +157,11 @@ function scenario2() {
         var currentAnswer = document.getElementById('answer').value.toUpperCase();
         if (currentAnswer.indexOf(scenario[1].answer) > -1) {
           console.log('got it');
-          gameWindow.innerHTML = '<span>As the bus begins to move, you make your way to the open seat at the front. At the next bus stop, Jessica, your crush from elementary school, walks onto the bus. In what feels like a scene out of a movie, time slows down and Jessica walks in slow motion and sits down in the open seat next to you. You blush excitedly for the rest of the ride, despite not quite having the nerve to talk to her. <br><br> GAIN 100 POINTS <br><br>PRESS ENTER TO CONTINUE</span>';
+          gameWindow.innerHTML = '<span>As the bus begins to move, you make your way to the open seat at the front. At the next bus stop, Jessica, your crush from elementary school, walks onto the bus. In what feels like a scene out of a movie, time slows down and Jessica walks in slow motion and sits down in the open seat next to you. You blush excitedly for the rest of the ride, despite not quite having the nerve to talk to her. <br><br> <span class="gain">GAIN</span> 100 POINTS <br><br>PRESS ENTER TO CONTINUE</span>';
           points += 100;
           scenario3();
         } else {
           // call death function here
-          console.log('got it wrong');
         }
       }
     }
@@ -167,12 +190,11 @@ function scenario3() {
         var currentAnswer = document.getElementById('answer').value.toUpperCase();
         if (currentAnswer.indexOf(scenario[2].answer) > -1) {
           console.log('got it');
-          gameWindow.innerHTML = '<span>You realize you\'re not quite ready for this pressure yet, and decide to play it cool for now. Jessica picks up her own pen, and you are glad you saved yourself from a potentially embarassing situation for now. <br><br> GAIN 50 POINTS <br><br>PRESS ENTER TO CONTINUE</span>';
+          gameWindow.innerHTML = '<span>You realize you\'re not quite ready for this pressure yet, and decide to play it cool for now. Jessica picks up her own pen, and you are glad you saved yourself from a potentially embarassing situation for now. <br><br> <span class="gain">GAIN</span> 50 POINTS <br><br>PRESS ENTER TO CONTINUE</span>';
           points += 50;
           scenario4();
         } else {
           // call death function here
-          console.log('got it wrong');
         }
       }
     }
@@ -199,12 +221,13 @@ function scenario4() {
         var currentAnswer = document.getElementById('answer').value.toUpperCase();
         if (currentAnswer.indexOf(scenario[3].answer) > -1) {
           console.log('got it');
-          gameWindow.innerHTML = '<span>You decide sitting next to your crush is too much for you and go to sit with your friends. You\'re glad to see some familiar faces and think middle school might not be so bad. <br><br> GAIN 50 POINTS <br><br>PRESS ENTER TO CONTINUE</span>';
+          gameWindow.innerHTML = '<span>You decide sitting next to your crush is too much for you and go to sit with your friends. You\'re glad to see some familiar faces and think middle school might not be so bad. <br><br> <span class="gain">GAIN</span> 50 POINTS <br><br>PRESS ENTER TO CONTINUE</span>';
           points += 50;
           scenario5();
         } else {
           // call death function here
           console.log('got it wrong');
+          // deathFunction();
         }
       }
     }
@@ -231,13 +254,10 @@ function scenario5() {
         var currentAnswer = document.getElementById('answer').value.toUpperCase();
         if (currentAnswer.indexOf(scenario[4].answer) > -1) {
           console.log('got it');
-          gameWindow.innerHTML = '<span>"Yes, that\'s right. ' + answer[4] + ' is the correct answer!" She smiles and you grin, hopeful that this is the beginning of a successful middle school education!<br><br> GAIN 100 POINTS. <br><br>PRESS ENTER TO CONTINUE</span>';
+          gameWindow.innerHTML = '<span>"Yes, that\'s right. ' + answer[4] + ' is the correct answer!" She smiles and you grin, hopeful that this is the beginning of a successful middle school education!<br><br> <span class="gain">GAIN</span> 100 POINTS. <br><br>PRESS ENTER TO CONTINUE</span>';
           points += 100;
           scenario6();
         } else {
-          console.log('wrong');
-          points -= 100;
-          scenario6();
         }
       }
     }
@@ -264,7 +284,7 @@ function scenario6() {
         var currentAnswer = document.getElementById('answer').value.toUpperCase();
         if (currentAnswer.indexOf(scenario[5].answer) > -1) {
           console.log('got it');
-          gameWindow.innerHTML = '<span>Education is important! If you had learned the word "precedent" yet, you\'d say education takes it! You decide to hold it and go after class so you can be sure to be on time. <br><br> GAIN 50 POINTS <br><br>PRESS ENTER TO CONTINUE</span>';
+          gameWindow.innerHTML = '<span>Education is important! If you had learned the word "precedent" yet, you\'d say education takes it! You decide to hold it and go after class so you can be sure to be on time. <br><br> <span class="gain">GAIN</span> 50 POINTS <br><br>PRESS ENTER TO CONTINUE</span>';
           points += 50;
           scenario7();
         } else {
@@ -328,7 +348,7 @@ function scenario8() {
         var currentAnswer = document.getElementById('answer').value.toUpperCase();
         if (currentAnswer.indexOf(scenario[7].answer) > -1) {
           console.log('got it');
-          gameWindow.innerHTML = '<span>You decide to fill up your own bottle and hurry to class. The drinking fountain water is great, and you realize you have more lunch money left over for that sweet chocolate milk later.<br><br> GAIN 25 POINTS <br><br>PRESS ENTER TO CONTINUE</span>';
+          gameWindow.innerHTML = '<span>You decide to fill up your own bottle and hurry to class. The drinking fountain water is great, and you realize you have more lunch money left over for that sweet chocolate milk later.<br><br> <span class="gain">GAIN</span> 25 POINTS <br><br>PRESS ENTER TO CONTINUE</span>';
           points += 25;
           scenario9();
         } else {
@@ -360,7 +380,7 @@ function scenario9() {
         var currentAnswer = document.getElementById('answer').value.toUpperCase();
         if (currentAnswer.indexOf(scenario[8].answer) > -1) {
           console.log('got it');
-          gameWindow.innerHTML = '<span>Cafeteria lunch was always so-so at elementary, but this is something else. These Sloppy Joes might be the single greatest things you\'ve ever eaten. YUM!<br><br> GAIN 100 POINTS <br><br>PRESS ENTER TO CONTINUE</span>';
+          gameWindow.innerHTML = '<span>Cafeteria lunch was always so-so at elementary, but this is something else. These Sloppy Joes might be the single greatest things you\'ve ever eaten. YUM!<br><br> <span class="gain">GAIN</span> 100 POINTS <br><br>PRESS ENTER TO CONTINUE</span>';
           points += 100;
           scenario10();
         } else {
@@ -392,7 +412,7 @@ function scenario10() {
         var currentAnswer = document.getElementById('answer').value.toUpperCase();
         if (currentAnswer.indexOf(scenario[9].answer) > -1) {
           console.log('got it');
-          gameWindow.innerHTML = '<span>You decide to take the single biggest risk of your young life and walk by Jessica\'s table. You smile awkwardly and say hello as you pass. She gives a shy wave back as you make your way to the lunch table with your friends. WOW! You finally did it! This is the beginning of the story you\'ll tell your future children about how it all began. <br><br> GAIN 100 POINTS <br><br>PRESS ENTER TO CONTINUE</span>';
+          gameWindow.innerHTML = '<span>You decide to take the single biggest risk of your young life and walk by Jessica\'s table. You smile awkwardly and say hello as you pass. She gives a shy wave back as you make your way to the lunch table with your friends. WOW! You finally did it! This is the beginning of the story you\'ll tell your future children about how it all began. <br><br> <span class="gain">GAIN</span> 100 POINTS <br><br>PRESS ENTER TO CONTINUE</span>';
           points += 100;
           scenario11();
         } else {
@@ -424,7 +444,7 @@ function scenario11() {
         var currentAnswer = document.getElementById('answer').value.toUpperCase();
         if (currentAnswer.indexOf(scenario[10].answer) > -1) {
           console.log('got it');
-          gameWindow.innerHTML = '<span>Despite your temptation to emulate all of the wacky, zany food fights from many of your favorite kids movies, you show restraint beyond your years and simply move the fry off of your plate and continue eating. <br><br> GAIN 50 POINTS <br><br>PRESS ENTER TO CONTINUE </span>';
+          gameWindow.innerHTML = '<span>Despite your temptation to emulate all of the wacky, zany food fights from many of your favorite kids movies, you show restraint beyond your years and simply move the fry off of your plate and continue eating. <br><br> <span class="gain">GAIN</span> 50 POINTS <br><br>PRESS ENTER TO CONTINUE </span>';
           points += 50;
           scenario12();
         } else {
@@ -456,7 +476,7 @@ function scenario12() {
         var currentAnswer = document.getElementById('answer').value.toUpperCase();
         if (currentAnswer.indexOf(scenario[11].answer) > -1) {
           console.log('got it');
-          gameWindow.innerHTML = '<span>You decline the call. You can make up an excuse for not answering it later, but you decide to keep playing and in a couple of minutes you beat the game! Priorities. <br><br> GAIN 100 POINTS <br><br>PRESS ENTER TO CONTINUE</span>';
+          gameWindow.innerHTML = '<span>You decline the call. You can make up an excuse for not answering it later, but you decide to keep playing and in a couple of minutes you beat the game! Priorities. <br><br> <span class="gain">GAIN</span> 100 POINTS <br><br>PRESS ENTER TO CONTINUE</span>';
           points += 100;
           scenario13();
         } else {
@@ -488,7 +508,7 @@ function scenario13() {
         var currentAnswer = document.getElementById('answer').value.toUpperCase();
         if (currentAnswer.indexOf(scenario[12].answer) > -1) {
           console.log('got it');
-          gameWindow.innerHTML = '<span>You sprint to your locker and grab your gym bag out of it. You are on your way to PE, after all. Might as well get warmed up before the education gets physical! <br><br> GAIN 100 POINTS <br><br>PRESS ENTER TO CONTINUE</span>';
+          gameWindow.innerHTML = '<span>You sprint to your locker and grab your gym bag out of it. You are on your way to PE, after all. Might as well get warmed up before the education gets physical! <br><br> <span class="gain">GAIN</span> 100 POINTS <br><br>PRESS ENTER TO CONTINUE</span>';
           points += 100;
           scenario14();
         } else {
@@ -520,7 +540,7 @@ function scenario14() {
         var currentAnswer = document.getElementById('answer').value.toUpperCase();
         if (currentAnswer.indexOf(scenario[13].answer) > -1) {
           console.log('got it');
-          gameWindow.innerHTML = '<span>You find this whole thing to be pretty bizarre, but it looks scary and dangerous. As you begin to walk away, the swirling black pool begins to decrease in size and eventually disappears entirely. Hmm. Time for class! <br><br> GAIN 100 POINTS <br><br>PRESS ENTER TO CONTINUE</span>';
+          gameWindow.innerHTML = '<span>You find this whole thing to be pretty bizarre, but it looks scary and dangerous. As you begin to walk away, the swirling black pool begins to decrease in size and eventually disappears entirely. Hmm. Time for class! <br><br> <span class="gain">GAIN</span> 100 POINTS <br><br>PRESS ENTER TO CONTINUE</span>';
           points += 100;
           scenario15();
         } else {
@@ -552,7 +572,7 @@ function scenario15() {
         var currentAnswer = document.getElementById('answer').value.toUpperCase();
         if (currentAnswer.indexOf(scenario[14].answer) > -1) {
           console.log('got it');
-          gameWindow.innerHTML = '<span>That is correct. All five Ds are necessary to be successful at this game. You prove to the rest of the class that you\'re a hot shot when it comes to dodgeball, and the coach puts you on the team for the showdown with the rival skeewl. <br><br> GAIN 100 POINTS <br><br>PRESS ENTER TO CONTINUE</span>';
+          gameWindow.innerHTML = '<span>That is correct. All five Ds are necessary to be successful at this game. You prove to the rest of the class that you\'re a hot shot when it comes to dodgeball, and the coach puts you on the team for the showdown with the rival skeewl. <br><br> <span class="gain">GAIN</span> 100 POINTS <br><br>PRESS ENTER TO CONTINUE</span>';
           points += 100;
           scenario16();
         } else {
@@ -584,7 +604,7 @@ function scenario16() {
         var currentAnswer = document.getElementById('answer').value.toUpperCase();
         if (currentAnswer.indexOf(scenario[15].answer) > -1) {
           console.log('got it');
-          gameWindow.innerHTML = '<span>You take a moment to get the gum off of your shoe. Gross. After seveeral seconds of clawing at it, you\'re able to get it completely off and into the nearest trash can <br><br> GAIN 25 POINTS <br><br>PRESS ENTER TO CONTINUE.</span>';
+          gameWindow.innerHTML = '<span>You take a moment to get the gum off of your shoe. Gross. After seveeral seconds of clawing at it, you\'re able to get it completely off and into the nearest trash can <br><br> <span class="gain">GAIN</span> 25 POINTS <br><br>PRESS ENTER TO CONTINUE.</span>';
           points += 25;
           scenario17();
         } else {
@@ -616,7 +636,7 @@ function scenario17() {
         var currentAnswer = document.getElementById('answer').value.toUpperCase();
         if (currentAnswer.indexOf(scenario[16].answer) > -1) {
           console.log('got it');
-          gameWindow.innerHTML = '<span>You politely get the bus driver\'s attention and let him know what happens. Without turning around, he shouts toward the back, "Jimmy Baker! You remember what happened last year, right? We better not have a repeat of that behavior this year!" Jimmy cowers in his seat, his cheeks burning with embarassment. <br><br> GAIN 100 POINTS <br><br>PRESS ENTER TO CONTINUE </span>';
+          gameWindow.innerHTML = '<span>You politely get the bus driver\'s attention and let him know what happens. Without turning around, he shouts toward the back, "Jimmy Baker! You remember what happened last year, right? We better not have a repeat of that behavior this year!" Jimmy cowers in his seat, his cheeks burning with embarassment. <br><br> <span class="gain">GAIN</span> 100 POINTS <br><br>PRESS ENTER TO CONTINUE </span>';
           points += 50;
           scenario18();
         } else {
@@ -648,8 +668,8 @@ function scenario18() {
         var currentAnswer = document.getElementById('answer').value.toUpperCase();
         if (currentAnswer.indexOf(scenario[17].answer) > -1) {
           console.log('got it');
-          gameWindow.innerHTML = '<span>Like most kids, your inclination is to say, "Nothing", but you know your mom won\'t have any of that. You let her know you learned a lot today, and give her a brief synopsis of the day. "Glad you had such a great day, honey!" she says. "Hope tomorow is just as great." You gulp. TOMORROW? <br><br> GAIN 100 POINTS <br><br>PRESS ENTER TO CONTINUE</span>';
-          points += 100;
+          gameWindow.innerHTML = '<span>Like most kids, your inclination is to say, "Nothing", but you know your mom won\'t have any of that. You let her know you learned a lot today, and give her a brief synopsis of the day. "Glad you had such a great day, honey!" she says. "Hope tomorow is just as great." You gulp. TOMORROW? <br><br> <span class="gain">GAIN</span> 100 POINTS <br><br>PRESS ENTER TO CONTINUE</span>';
+          points += 3000;
           deathFunction();
         } else {
           // call death function here
@@ -669,20 +689,36 @@ start_btn.addEventListener('click', function() {
   startGame();
 });
 
-resultsButton.addEventListener('click', function(event) {
-  event.preventDefault();
-  var name = document.getElementById('update_score').value;
-  var score = points;
-  var scores = [];
-  if (localStorage.getItem('scores')) {
-    scores = JSON.parse(localStorage.scores);
-  }
-  scores.push({
-    user: name,
-    score: score
+function endGame() {
+  document.addEventListener('keydown', function(e) {
+    if (e.which === 13) {
+      var correct = document.getElementById('answer');
+
+      if (correct) {
+        if (correct.value.toUpperCase() !== correct.name) {
+          deathFunction();
+        }
+      }
+    }
   });
-  localStorage.scores = JSON.stringify(scores);
-  window.location = 'scores.html';
+}
+
+resultsButton.addEventListener('click', function(event) {
+  event.preventDefault();
+  var name = document.getElementById('update_score').value;
+  var score = points;
+  var scores = [];
+  if (localStorage.getItem('scores')) {
+    scores = JSON.parse(localStorage.scores);
+  }
+  scores.push({
+    user: name,
+    score: score
+  });
+  localStorage.scores = JSON.stringify(scores);
+  window.location = 'scores.html';
 }
 
 );
+
+endGame();
