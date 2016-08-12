@@ -16,7 +16,7 @@
     <div class="wrapper">
 
       <header>
-        <a href="index.html"><img src="img/logo.png"></a>
+        <a href="index.html"><img src="img/pixel_Jhonny.jpg" height="75" width="75"></a>
 
         <nav>
           <ul>
@@ -43,21 +43,6 @@
 
           <div class="game_Window" id="game_Window">
 
-            <div id="pop_up">
-
-              <h1>YOU DIED!</h1>
-
-              <p>
-                Ya done goofed! You caused the Death Function to happen. Way to go, Jr. Not. You're not a very smart cookie are ya, buddy guy friend, eh? Soary, I didn't mean that. Here's some back bacon, ya hoser.
-              </p>
-
-              <form>
-                <label>NAME: <input type="text" name="name" id="update_score" autofocus="auto"></label>
-              </form>
-
-              <button type="submit">Submit Score</button>
-
-            </div> <!-- .game_form -->
             <!-- <p id="dialogue">Gameplay goes in this window!</p> -->
             <p class="css_typing" id="intro_text">
               It’s the first day of middle school. You are a student on your first day. Little do you know, you're about to go through a rather mundane day, in which every choice could lead to you learning more, catching the eye of your crush, or simply becoming cooler.
@@ -65,6 +50,20 @@
 
             <div id="choice_Container"></div>
           </div> <!-- .game_window -->
+          <div id="pop_up">
+
+            <h1>GAME OVER!</h1>
+
+            <p>
+              The game is over! Please enter in your initials in the field box below. Once you've done that click on Submit Score and check out your high scores!
+            </p>
+
+            <form>
+              <label>NAME: <input type="text" name="name" id="update_score" autofocus="auto"></label>
+              <button type="submit" id="results">Submit Score</button>
+            </form>
+
+          </div> <!-- .game_form -->
 
         </div> <!-- .flex-container -->
 
