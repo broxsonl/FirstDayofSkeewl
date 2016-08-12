@@ -1,6 +1,9 @@
 /* =========================
 GAME STRUCTURE STYLES
 ========================= */
+.main_content {
+  position: relative;
+}
 
 .content_container {
   background-color: #ccc;
@@ -20,6 +23,12 @@ GAME STRUCTURE STYLES
   height: 750px;
 }
 
+.johnny {
+  position: fixed;
+  bottom: 0;
+  left: 190px;
+}
+
 .game_Window {
   background-image: url('../../img/chalkboard_bg.jpeg');
   background-position: center;
@@ -27,9 +36,27 @@ GAME STRUCTURE STYLES
   height: 700px;
   width: 90%;
   margin-bottom: 30px;
-  padding: 0 10px;
+  padding: 15px;
   border: 5px solid #000;
+  font-family: Courier, sans-serif;
+  font-size: 20px;
+  line-height: 1.5em;
   color: #5dfc0a;
+  position: relative;
+}
+
+#answer {
+  font-family: Courier, sans-serif;
+  font-size: 28px;
+  color: #5dfc0a;
+  width: 80%;
+  text-transform: uppercase;
+  display: block;
+  outline: none;
+  position:absolute;
+  bottom: 10px;
+  background-color: transparent;
+  border: 0;
 }
 
 .instructions_content,
@@ -143,7 +170,7 @@ DEATHFUNCTION FORM STYLES
   left: 0;
 
   margin: 50px auto;
-  margin-bottom: 200px;
+  margin-bottom: 275px;
   border: 5px solid #fff;
   padding: 10px;
 }
