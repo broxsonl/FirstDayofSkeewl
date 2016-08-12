@@ -100,7 +100,16 @@ function startGame() {
         var currentAnswer = document.getElementById('answer').value.toUpperCase();
         if (currentAnswer.indexOf(scenario[0].answer) > -1) {
           console.log('Question 1 right');
+<<<<<<< HEAD
+<<<<<<< HEAD
+          gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
+          // alert('you got it right, press enter to proceed');
+=======
+          gameWindow.innerHTML = '<span>You decide to wait it out for the bus to arrive. It eventually pulls up a few minutes late. The door to the bus flies open with a whirr revealing the driver with a disapproving look on his face. "Hurry up and get on, kid," he tells you. "I ain\'t getting older." You quickly run onto the bus and the door shuts quickly behind you. GAIN 100 POINTS.</span>';
+>>>>>>> 6b94997f70671f5299acd2ee5d66cc811fd655a9
+=======
           gameWindow.innerHTML = '<span>You decide to wait it out for the bus to arrive. It eventually pulls up a few minutes late. The door to the bus flies open with a whirr revealing the driver with a disapproving look on his face. "Hurry up and get on, kid," he tells you. "I ain\'t getting older." You quickly run onto the bus and the door shuts quickly behind you. <br><br> GAIN 100 POINTS <br><br>PRESS ENTER TO CONTINUE</span>';
+>>>>>>> 76555e5814dfb18778841592c708e62fde026ded
           points += 100;
           scenario2();
         } else {
@@ -132,7 +141,15 @@ function scenario2() {
         var currentAnswer = document.getElementById('answer').value.toUpperCase();
         if (currentAnswer.indexOf(scenario[1].answer) > -1) {
           console.log('got it');
+<<<<<<< HEAD
+<<<<<<< HEAD
+          gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
+=======
+          gameWindow.innerHTML = '<span>As the bus begins to move, you make your way to the open seat at the front. At the next bus stop, Jessica, your crush from elementary school, walks onto the bus. In what feels like a scene out of a movie, time slows down and Jessica walks in slow motion and sits down in the open seat next to you. You blush excitedly for the rest of the ride, despite not quite having the nerve to talk to her. GAIN 100 POINTS</span>';
+>>>>>>> 6b94997f70671f5299acd2ee5d66cc811fd655a9
+=======
           gameWindow.innerHTML = '<span>As the bus begins to move, you make your way to the open seat at the front. At the next bus stop, Jessica, your crush from elementary school, walks onto the bus. In what feels like a scene out of a movie, time slows down and Jessica walks in slow motion and sits down in the open seat next to you. You blush excitedly for the rest of the ride, despite not quite having the nerve to talk to her. <br><br> GAIN 100 POINTS <br><br>PRESS ENTER TO CONTINUE</span>';
+>>>>>>> 76555e5814dfb18778841592c708e62fde026ded
           points += 100;
           scenario3();
         } else {

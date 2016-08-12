@@ -3,87 +3,209 @@ GAME STRUCTURE STYLES
 ========================= */
 
 .content_container {
-  background-color: #ccc;
-  padding-top: 50px;
+  background-color: #ccc;
+  padding-top: 50px;
 }
 
 .page_title {
-  text-align: center;
-  margin-top: 0;
+  text-align: center;
+  margin-top: 0;
 }
 
 .flex_container {
-  display: flex;
-  flex-direction: col;
-  justify-content: space-around;
-  align-items: center;
-  height: 750px;
+  display: flex;
+  flex-direction: col;
+  justify-content: space-around;
+  align-items: center;
+  height: 750px;
 }
 
 .game_Window {
-  background-image: url('../../img/chalkboard_bg.jpeg');
-  background-position: center;
-  background-size: cover;
-  height: 450px;
-  width: 60%;
-  padding: 0 10px;
-  color: #5dfc0a;
+  background-image: url('../../img/chalkboard_bg.jpeg');
+  background-position: center;
+  background-size: cover;
+  height: 450px;
+  width: 60%;
+  padding: 0 10px;
+  color: #5dfc0a;
 }
 
 .instructions_content,
 .points_content {
-  width: 25%;
-  height: 450px;
-  padding: 0 10px;
-  color: #5dfc0a
+  width: 25%;
+  height: 450px;
+  padding: 0 10px;
+  color: #5dfc0a
 }
 
 .instructions_content h2 {
-  font-size: 14px;
-  font-family: 'Press Start 2P', sans-serif;
-  text-decoration: underline;
+  font-size: 14px;
+  font-family: 'Press Start 2P', sans-serif;
+  text-decoration: underline;
 }
 
 .instructions_content li {
-  margin: 20px 0 20px 0;
-  font-size: 14px;
-  font-family: 'Schoolbell', sans-serif;
+  margin: 20px 0 20px 0;
+  font-size: 14px;
+  font-family: 'Schoolbell', sans-serif;
 }
 
 .instructions_content span {
-  text-decoration: underline;
+  text-decoration: underline;
 }
 
 .instructions_content p {
-  font-size: 14px;
-  font-family: 'Press Start 2P', sans-serif;
+  font-size: 14px;
+  font-family: 'Press Start 2P', sans-serif;
 }
 
 .page_title {
-  font-family: 'Press Start 2P', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  color: #5dfc0a;
-  text-align: center;
+  font-family: 'Press Start 2P', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #5dfc0a;
+  text-align: center;
 
-  max-width: 600px;
-  background-color: #000;
-  margin: 20px auto;
-  border: 2px solid #152614;
-  padding: 20px;
+  max-width: 600px;
+  background-color: #000;
+  margin: 20px auto;
+  border: 2px solid #152614;
+  padding: 20px;
 }
 
 .play_now_flex {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #intro_text {
-  display: none;
+  display: none;
 }
 
+button {
+  background: #152614;
+  background-image: -webkit-linear-gradient(top, #152614, #5dfc0a);
+  background-image: -moz-linear-gradient(top, #152614, #5dfc0a);
+  background-image: -ms-linear-gradient(top, #152614, #5dfc0a);
+  background-image: -o-linear-gradient(top, #152614, #5dfc0a);
+  background-image: linear-gradient(to bottom, #152614, #5dfc0a);
+
+  font-family: 'Press Start 2P', sans-serif;;
+  font-size: 20px;
+  color: #eaf0ce;
+  text-shadow: 3px 3px 2px #000;
+  text-align: center;
+
+  margin-bottom: 100px;
+  border: 2px solid #000;
+  border-radius: 8px;
+    -webkit-border-radius: 8;
+    -moz-border-radius: 8;
+  padding: 10px 20px 10px 20px;
+}
+
+button:hover {
+  background: #152614;
+  background-image: -webkit-linear-gradient(top, #5dfc0a, #152614);
+  background-image: -moz-linear-gradient(top, #5dfc0a, #152614);
+  background-image: -ms-linear-gradient(top, #5dfc0a, #152614);
+  background-image: -o-linear-gradient(top, #5dfc0a, #152614);
+  background-image: linear-gradient(to bottom, #5dfc0a, #152614);
+  cursor: pointer;
+}
+
+/* ========================================
+USER RESPONSE FORM STYLES
+======================================== */
+
+.form_type_response {
+  width: 500px;
+  margin: 0;
+}
+
+#type_response {
+  font-family: Courier, monospace;
+  font-size: 14px;
+  color: #5dfc0a;
+  text-transform: uppercase;
+  background-color: #000;
+  border: 2px solid #fff;
+  border: none;
+
+  max-width: 500px;
+  height: 30px;
+}
+
+#type_response:focus {
+  outline: none;
+}
+
+
+
+/* ========================================
+DEATHFUNCTION FORM STYLES
+======================================== */
+
+#pop_up{
+  display: flex;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #000;
+  width: 80%;
+
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  margin: 50px auto;
+  border: 5px solid #fff;
+  padding: 10px;
+}
+
+
+#pop_up p {
+  font-size: 14px;
+  color: #fff;
+  padding: 0 20px;
+  margin-bottom: 30px;
+
+  text-align: center;
+}
+
+#pop_up h1 {
+  font-size: 48px;
+  color: #ff0000;
+
+  margin: 0;
+}
+
+#pop_up p, h1, form label, form label input {
+  font-family: Courier, monospace;
+}
+
+#pop_up input {
+  font-size: 14px;
+  color: #5dfc0a;
+  text-transform: uppercase;
+  background-color: #000;
+  border: 3px solid #152614;
+  padding: 5px;
+
+  width: 150px;
+  height: 30px;
+}
+
+#pop_up input:focus {
+  outline: none;
+}
+
+/* button styling */
 button {
   background: #152614;
   background-image: -webkit-linear-gradient(top, #152614, #5dfc0a);
@@ -92,18 +214,18 @@ button {
   background-image: -o-linear-gradient(top, #152614, #5dfc0a);
   background-image: linear-gradient(to bottom, #152614, #5dfc0a);
 
-  font-family: 'Press Start 2P', sans-serif;;
+  font-family: 'Press Start 2P', sans-serif;
   font-size: 20px;
-  color: #eaf0ce;
+  color: #fff;
   text-shadow: 3px 3px 2px #000;
-  text-align: center;
 
-  margin-bottom: 100px;
+  margin: 40px auto;
   border: 2px solid #000;
   border-radius: 8px;
     -webkit-border-radius: 8;
     -moz-border-radius: 8;
   padding: 10px 20px 10px 20px;
+  outline: none;
 }
 
 button:hover {
