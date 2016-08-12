@@ -14,8 +14,8 @@ video {
    height: auto;
    z-index: -100;
    transform: translateX(-50%) translateY(-50%);
- background-size: cover;
- transition: 1s opacity
+   background-size: cover;
+   transition: 1s opacity
 }
 
 section h1 {
@@ -25,7 +25,7 @@ section h1 {
   color: #5dfc0a;
   text-align: center;
   opacity: .7;
-  max-width: 600px;
+  max-width: 800px;
   background-color: #000;
   margin: 20px auto;
   border: 2px solid #152614;
@@ -34,9 +34,8 @@ section h1 {
 
 section p {
   font-family: 'Schoolbell', sans-serif;
-  font-size: 20px;
-  color: #eaf0ce;
-
+  font-size: 25px;
+  color: #fff;
   text-align: center;
   line-height: 1.5em;
   max-width: 500px;
@@ -48,7 +47,7 @@ section p {
   font-family: 'Schoolbell', sans-serif;
   font-size: 36px;
   font-weight: 700;
-  color: #eaf0ce;
+  color: #fff;
 
   text-align: center;
   line-height: 1.5em;
@@ -111,6 +110,7 @@ header{
   margin: 0 auto;
   opacity: 1;
   color: #5dfc0a;
+  /*text-decoration: none;*/
 }
 
 header img {
@@ -122,6 +122,7 @@ header img {
 
 header nav{
   margin: 0 50px;
+  /*text-decoration: none;*/
 
 }
 
@@ -135,11 +136,12 @@ a:visited {
 
 nav ul li {
   font-family: 'Press Start 2P', sans-serif;
-  font-size: 14px;
+  font-size: 20px;
   display: inline;
   margin-right: 20px;
   margin-left: 100px;
   color: #5dfc0a;
+  /*text decoration: none;*/
 }
 
 nav ul li a {
@@ -147,4 +149,8 @@ nav ul li a {
   opacity: 1;
   font-size: 20px;
   font-weight: bold;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  color: #fff;
 }
