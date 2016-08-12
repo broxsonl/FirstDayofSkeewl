@@ -70,16 +70,17 @@ function Scenario(question, answer) {
   this.answer = answer;
 };
 
+function deathFunction() {
+  var death = document.getElementById('pop_up');
+  death.style.display = 'block';
+};
+
 // pushes instantiated scenario objects to scenario array
 for (var i = 0; i < question.length; i++) {
   scenario.push(new Scenario(question[i], answer[i]));
 };
 
-// start intro text when clicking "Play Game"
 
-// function death() {
-//   // add death function here
-// }
 
 function startGame() {
 
@@ -103,10 +104,7 @@ function startGame() {
           points += 100;
           scenario2();
         } else {
-          gameWindow.innerHTML = '<span>You decide that you\'re not into this whole education thing today--maybe you\'ll try again tomorrow. You grab your backpack, throw it over one shoulder, and head off toward the park. You figure you can hide out there for an hour or two, and then sneak back home without anyone being the wiser. A voice comes from behind you. "Jimmy! What are you doing?!" Oh no! It\'s your mother! She must\'ve forgotten something at home, come back from work, and spotted you trying to skip. She\'s pulling over and is headed your way. This will not end well. <br><br> LOSE 100 POINTS <br><br>Stay in School, kids.<br><br>PRESS ENTER TO CONTINUE</span>';
-          points -= 100;
-          // deathFunctions();
-          console.log('Question 1 wrong');
+          deathFunction();
         }
       }
     }
@@ -237,7 +235,6 @@ function scenario5() {
           scenario6();
         } else {
           console.log('wrong');
-          gameWindow.innerHTML = '<span>"No, that\'s not it. ' + answer[4] + ' is the correct answer. Perhaps you should pay more attention." You slump in your seat. Hopefully this isn\'t a sign of what\'s to come with the rest of your middle school education.<br><br> LOSE 100 POINTS <br><br>PRESS ENTER TO CONTINUE</span>';
           points -= 100;
           scenario6();
         }
@@ -664,10 +661,9 @@ function scenario18() {
 
 // introText();
 // startGame();
-startGame();
-
 
 start_btn.addEventListener('click', function() {
   var intro = document.getElementById('intro_text');
   intro.style.display = 'block';
+  startGame();
 });
