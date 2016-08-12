@@ -30,13 +30,39 @@ section h1 {
   font-family: 'Press Start 2P', sans-serif;
   font-size: 16px;
   font-weight: 700;
-  color: #5dfc0a;
+  color: #fff;
 
   max-width: 600px;
+  width: 75%;
   background-color: #000;
   border: 2px solid #152614;
-  padding: 10px 15px;
+  /*padding: 10px 15px;*/
+  border: 5px double #5dfc0a;
 }
+
+thead {
+  border-bottom: 5px double #5dfc0a;
+}
+
+#table {
+  width: 100%;
+  /*margin-left: 10%;*/
+}
+
+#table td {
+  padding: 2%;
+}
+
+#tbody tr td:nth-child(3), #score{
+  color: #5dfc0a;
+}
+
+/*.johnny_gif {
+  position: fixed;
+  width: 10%;
+  top: 175px;
+  right: 275px;
+}*/
 
 /* styling for play again button that links to game.html */
 button {
