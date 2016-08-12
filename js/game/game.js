@@ -70,16 +70,17 @@ function Scenario(question, answer) {
   this.answer = answer;
 };
 
+function deathFunction() {
+  var death = document.getElementById('pop_up');
+  death.style.display = 'block';
+};
+
 // pushes instantiated scenario objects to scenario array
 for (var i = 0; i < question.length; i++) {
   scenario.push(new Scenario(question[i], answer[i]));
 };
 
-// start intro text when clicking "Play Game"
 
-// function death() {
-//   // add death function here
-// }
 
 function startGame() {
 
@@ -99,23 +100,11 @@ function startGame() {
         var currentAnswer = document.getElementById('answer').value.toUpperCase();
         if (currentAnswer.indexOf(scenario[0].answer) > -1) {
           console.log('Question 1 right');
-<<<<<<< HEAD
-<<<<<<< HEAD
-          gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
-          // alert('you got it right, press enter to proceed');
-=======
-          gameWindow.innerHTML = '<span>You decide to wait it out for the bus to arrive. It eventually pulls up a few minutes late. The door to the bus flies open with a whirr revealing the driver with a disapproving look on his face. "Hurry up and get on, kid," he tells you. "I ain\'t getting older." You quickly run onto the bus and the door shuts quickly behind you. GAIN 100 POINTS.</span>';
->>>>>>> 6b94997f70671f5299acd2ee5d66cc811fd655a9
-=======
           gameWindow.innerHTML = '<span>You decide to wait it out for the bus to arrive. It eventually pulls up a few minutes late. The door to the bus flies open with a whirr revealing the driver with a disapproving look on his face. "Hurry up and get on, kid," he tells you. "I ain\'t getting older." You quickly run onto the bus and the door shuts quickly behind you. <br><br> GAIN 100 POINTS <br><br>PRESS ENTER TO CONTINUE</span>';
->>>>>>> 76555e5814dfb18778841592c708e62fde026ded
           points += 100;
           scenario2();
         } else {
-          gameWindow.innerHTML = '<span>You decide that you\'re not into this whole education thing today--maybe you\'ll try again tomorrow. You grab your backpack, throw it over one shoulder, and head off toward the park. You figure you can hide out there for an hour or two, and then sneak back home without anyone being the wiser. A voice comes from behind you. "Jimmy! What are you doing?!" Oh no! It\'s your mother! She must\'ve forgotten something at home, come back from work, and spotted you trying to skip. She\'s pulling over and is headed your way. This will not end well. <br><br> LOSE 100 POINTS <br><br>Stay in School, kids.<br><br>PRESS ENTER TO CONTINUE</span>';
-          points -= 100;
-          // deathFunctions();
-          console.log('Question 1 wrong');
+          deathFunction();
         }
       }
     }
@@ -143,15 +132,7 @@ function scenario2() {
         var currentAnswer = document.getElementById('answer').value.toUpperCase();
         if (currentAnswer.indexOf(scenario[1].answer) > -1) {
           console.log('got it');
-<<<<<<< HEAD
-<<<<<<< HEAD
-          gameWindow.innerHTML = '<span>Great job, press enter to proceed</span>';
-=======
-          gameWindow.innerHTML = '<span>As the bus begins to move, you make your way to the open seat at the front. At the next bus stop, Jessica, your crush from elementary school, walks onto the bus. In what feels like a scene out of a movie, time slows down and Jessica walks in slow motion and sits down in the open seat next to you. You blush excitedly for the rest of the ride, despite not quite having the nerve to talk to her. GAIN 100 POINTS</span>';
->>>>>>> 6b94997f70671f5299acd2ee5d66cc811fd655a9
-=======
           gameWindow.innerHTML = '<span>As the bus begins to move, you make your way to the open seat at the front. At the next bus stop, Jessica, your crush from elementary school, walks onto the bus. In what feels like a scene out of a movie, time slows down and Jessica walks in slow motion and sits down in the open seat next to you. You blush excitedly for the rest of the ride, despite not quite having the nerve to talk to her. <br><br> GAIN 100 POINTS <br><br>PRESS ENTER TO CONTINUE</span>';
->>>>>>> 76555e5814dfb18778841592c708e62fde026ded
           points += 100;
           scenario3();
         } else {
@@ -254,7 +235,6 @@ function scenario5() {
           scenario6();
         } else {
           console.log('wrong');
-          gameWindow.innerHTML = '<span>"No, that\'s not it. ' + answer[4] + ' is the correct answer. Perhaps you should pay more attention." You slump in your seat. Hopefully this isn\'t a sign of what\'s to come with the rest of your middle school education.<br><br> LOSE 100 POINTS <br><br>PRESS ENTER TO CONTINUE</span>';
           points -= 100;
           scenario6();
         }
@@ -669,7 +649,7 @@ function scenario18() {
           console.log('got it');
           gameWindow.innerHTML = '<span>Like most kids, your inclination is to say, "Nothing", but you know your mom won\'t have any of that. You let her know you learned a lot today, and give her a brief synopsis of the day. "Glad you had such a great day, honey!" she says. "Hope tomorow is just as great." You gulp. TOMORROW? <br><br> GAIN 100 POINTS <br><br>PRESS ENTER TO CONTINUE</span>';
           points += 100;
-          scenario19();
+          deathFunction();
         } else {
           // call death function here
           console.log('got it wrong');
@@ -681,10 +661,9 @@ function scenario18() {
 
 // introText();
 // startGame();
-startGame();
-
 
 start_btn.addEventListener('click', function() {
   var intro = document.getElementById('intro_text');
   intro.style.display = 'block';
+  startGame();
 });

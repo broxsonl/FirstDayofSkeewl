@@ -58,12 +58,12 @@ thead {
   color: #5dfc0a;
 }
 
-/*.johnny_gif {
+.johnny {
   position: fixed;
-  width: 10%;
-  top: 175px;
-  right: 275px;
-}*/
+  width: 25%;
+  top: 35%;
+  left: 65%;
+}
 
 /* styling for play again button that links to game.html */
 button {
