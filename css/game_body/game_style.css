@@ -26,7 +26,8 @@ GAME STRUCTURE STYLES
 .johnny {
   position: fixed;
   bottom: 0;
-  left: 190px;
+  left: 0;
+  z-index: 1;
 }
 
 .game_Window {
