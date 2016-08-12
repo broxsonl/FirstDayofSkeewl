@@ -53,6 +53,7 @@ thead {
   padding: 2%;
 }
 
+
 #tbody tr td:nth-child(3), #score{
   color: #5dfc0a;
 }
