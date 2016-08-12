@@ -14,6 +14,7 @@ var gameWindow = document.getElementById('game_Window');
 var gameText = document.createElement('p');
 var gameStart = document.getElementById('game_start');
 var start_btn = document.getElementById('game_start');
+var resultsButton = document.getElementById('results');
 var counter = 0;
 // var gameWin = document.createElement();
 // var gameLose = document.createElement();
@@ -667,3 +668,21 @@ start_btn.addEventListener('click', function() {
   intro.style.display = 'block';
   startGame();
 });
+
+resultsButton.addEventListener('click', function(event) {
+  event.preventDefault();
+  var name = document.getElementById('update_score').value;
+  var score = points;
+  var scores = [];
+  if (localStorage.getItem('scores')) {
+    scores = JSON.parse(localStorage.scores);
+  }
+  scores.push({
+    user: name,
+    score: score
+  });
+  localStorage.scores = JSON.stringify(scores);
+  window.location = 'scores.html';
+}
+
+);
