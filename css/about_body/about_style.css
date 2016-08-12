@@ -6,32 +6,39 @@ ABOUT STRUCTURE STYLES
 .img_header,
 .student_flex {
   display: flex;
+  font-family: 'Schoolbell', sans-serif;
+  font-size: 25px;
+  padding: 20px;
   border-radius: 100%;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  border-radius: 100%;
-  background-color: black;
+  border-radius: 10%;
+  /*background-color: black;*/
+  margin-bottom: -55px;
 }
 
 .about_section {
   text-align: center;
-  margin: 100px 50px;
+  font-family: 'Schoolbell', sans-serif;
+  font-size: 25px;
+  padding: 25px;
+  margin: 35px 30px;
   /*color: white;*/
   color: #5DFC0A;
-  background-color: black;
+  /*background-color: black;*/
 
 }
 
 .student_flex p {
-  margin: 50px 30px;
+  margin: 40px 30px;
   color: white;
   /*background-color: black;*/
 }
 
 .student_flex p span {
   font-weight: 700px;
-  font-size: 20px;
+  font-size: 25px;
   /*color: white*/
   color: #5DFC0A;
 }
@@ -41,4 +48,13 @@ ABOUT STRUCTURE STYLES
 }
 .student_flex img {
   border-radius: 150%;
+}
+.about_section h1 {
+  /*background-color: black;*/
+  font-size: 70px;
+  color: white;
+  padding: 60px 35px;
+}
+.main_content {
+    /*margin-bottom: 50px;  */
 }
